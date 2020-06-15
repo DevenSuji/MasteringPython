@@ -1,0 +1,1 @@
+In terms of the core types, numbers, strings, and tuples are immutable; lists, dictionaries, and sets are not.
