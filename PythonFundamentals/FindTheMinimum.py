@@ -17,3 +17,7 @@ print('Minimum value is', minimum)
 # # There is an inbuilt function called min to perform the same operation.
 
 print(min(3, 1, 2))
+
+
+print('Range:', min(4, 3, 5, 89, 6),'-',max(73, 56, 99, 45))
+print('Range:', min(47, 95, 88, 73, 88, 84), '-', max(47, 95, 88, 73, 88, 84))
