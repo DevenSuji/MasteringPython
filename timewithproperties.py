@@ -1,15 +1,15 @@
 # timewithproperties.py
 """Class Time with read-write properties."""
 
-
 class Time:
     """Class Time with read-write properties."""
 
     def __init__(self, hour=0, minute=0, second=0):
         """Initialize each attribute."""
+
         self.hour = hour  # 0-23
-        self.minute = minute  # 0-59
-        self.second = second  # 0-59
+        self.minute = minute # 0-59
+        self.second = second # 0-59
 
     @property
     def hour(self):
@@ -46,7 +46,7 @@ class Time:
     def second(self, second):
         """Set the second."""
         if not (0 <= second < 60):
-            raise ValueError(f'Second ({second}) must be 0-59')
+            raise ValueError(f'second ({second}) must be 0-59')
 
         self._second = second
 
@@ -56,10 +56,19 @@ class Time:
         self.minute = minute
         self.second = second
 
+    @property
+    def time(self):
+        """Return hour minute and second as tuple"""
+        return(self.hour, self.minute, self.second)
+
+    @time.setter
+    def time(self, time_tuple):
+        """Set time from a tuple containing hour, minute and second."""
+        self.set_time(time_tuple[0]. time_tuple[1], time_tuple[2])
+
     def __repr__(self):
         """Return Time string for repr()."""
-        return (f'Time(hour={self.hour}, minute={self.minute}, ' +
-                f'second={self.second})')
+        return (f'Time(hour={self.hour}, minute={self.minute}, second={self.second})')
 
     def __str__(self):
         """Return Time string in 12-hour clock format."""
