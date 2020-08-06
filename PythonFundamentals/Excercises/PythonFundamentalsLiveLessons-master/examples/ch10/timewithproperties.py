@@ -1,6 +1,7 @@
 # timewithproperties.py
 """Class Time with read-write properties."""
 
+
 class Time:
     """Class Time with read-write properties."""
 
@@ -57,27 +58,11 @@ class Time:
 
     def __repr__(self):
         """Return Time string for repr()."""
-        return (f'Time(hour={self.hour}, minute={self.minute}, ' + 
+        return (f'Time(hour={self.hour}, minute={self.minute}, ' +
                 f'second={self.second})')
 
     def __str__(self):
         """Return Time string in 12-hour clock format."""
-        return (('12' if self.hour in (0, 12) else str(self.hour % 12)) + 
-                f':{self.minute:0>2}:{self.second:0>2}' + 
+        return (('12' if self.hour in (0, 12) else str(self.hour % 12)) +
+                f':{self.minute:0>2}:{self.second:0>2}' +
                 (' AM' if self.hour < 12 else ' PM'))
-
-
-##########################################################################
-# (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
-# Pearson Education, Inc. All Rights Reserved.                           #
-#                                                                        #
-# DISCLAIMER: The authors and publisher of this book have used their     #
-# best efforts in preparing the book. These efforts include the          #
-# development, research, and testing of the theories and programs        #
-# to determine their effectiveness. The authors and publisher make       #
-# no warranty of any kind, expressed or implied, with regard to these    #
-# programs or to the documentation contained in these books. The authors #
-# and publisher shall not be liable in any event for incidental or       #
-# consequential damages in connection with, or arising out of, the       #
-# furnishing, performance, or use of these programs.                     #
-##########################################################################
